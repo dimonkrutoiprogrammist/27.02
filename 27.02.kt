@@ -1,5 +1,4 @@
 package com.example.practice11
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +27,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 /**
- * Практика 1: Контейнер Box и фон для текста
  * Задача: Сделать так, чтобы каждый участок текста был залит фоном.
  */
 @androidx.compose.runtime.Composable
@@ -40,7 +36,6 @@ fun Practice1BoxLayout() {
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
-        // Текст 1: Верхний левый угол (TopStart)
         Text(
             text = "Текст 1 (TopStart)",
             fontSize = 20.sp,
@@ -50,8 +45,6 @@ fun Practice1BoxLayout() {
                 .background(Color.Red)     // Заливка фоном (Практика 1)
                 .padding(8.dp)             // Отступ внутри фона для красоты
         )
-
-        // Текст 2: Центр (Center)
         Text(
             text = "Текст 2 (Center)",
             fontSize = 20.sp,
@@ -61,8 +54,6 @@ fun Practice1BoxLayout() {
                 .background(Color.Green)   // Заливка фоном
                 .padding(8.dp)
         )
-
-        // Текст 3: Нижний правый угол (BottomEnd)
         Text(
             text = "Текст 3 (BottomEnd)",
             fontSize = 20.sp,
@@ -72,8 +63,5 @@ fun Practice1BoxLayout() {
                 .background(Color.Blue)    // Заливка фоном
                 .padding(8.dp)
         )
-
-        // Текст 4: Пример с contentAlignment самого Box (если бы не было align у текста)
-        // Но так как мы используем align у каждого текста, они игнорируют contentAlignment родителя
     }
 }
